@@ -22,7 +22,7 @@ const LoginPage = () => {
           Hey, enter your details to login
         </p>
         <LoginForm />
-        <p className="mt-14 text-[#8C8C8C]">Or sign in with</p>
+        <p className="mt-8 text-[#8C8C8C]">Or sign in with</p>
         <div className="flex mt-6 gap-10">
           <AiOutlineGoogle size={70} className="opacity-[20%]" />
           <AiOutlineGithub size={70} className="opacity-[20%]" />
