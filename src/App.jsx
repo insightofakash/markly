@@ -24,6 +24,7 @@ function App() {
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
+
   );
 }
 
