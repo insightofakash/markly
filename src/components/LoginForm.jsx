@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { useState } from "react";
+import Button from "./Button";
 
 const LoginForm = () => {
   const [isShownPassword, setIsShownPassword] = useState(false);
@@ -28,9 +29,7 @@ const LoginForm = () => {
           Register Now!
         </Link>
       </div>
-      <button className="bg-[#174674] px-[26px] py-[10px] rounded-full text-[white]">
-        Sign in
-      </button>
+      <Button active={true}>Sign In</Button>
     </div>
   );
 };
