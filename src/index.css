@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Telegraph";
+  src: url("src/Fonts/PPTelegraf-Regular.otf") format("truetype");
+  font-weight: 400;
+}
