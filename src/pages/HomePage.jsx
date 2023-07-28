@@ -1,6 +1,6 @@
 import Logo from "../components/Logo";
 import Button from "../components/Button";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (

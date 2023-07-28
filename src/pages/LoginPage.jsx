@@ -12,12 +12,12 @@ const LoginPage = () => {
         <Button active={false}>Login</Button>
       </div>
       <div className=" w-[100vw] h-[100vh] pt-[25vw] md:pt-20 flex flex-col items-center bg-[#ECECEC] md:w-[500px] md:h-[700px] md:rounded-[64px] p-20">
-        <h1 className="text-[#174674] text-5xl">Sign in</h1>
+        <h1 className="text-[#174674] text-5xl">Sign in!</h1>
         <p className="mt-8 text-[#578598] mb-12">
           Hey, enter your details to login
         </p>
         <LoginForm />
-        <p className="mt-14 text-[#8C8C8C]">Or sign in with</p>
+        <p className="mt-8 text-[#8C8C8C]">Or sign in with</p>
         <div className="flex mt-6 gap-10">
           <AiOutlineGoogle size={70} className="opacity-[20%]" />
           <AiOutlineGithub size={70} className="opacity-[20%]" />
