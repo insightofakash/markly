@@ -96,7 +96,10 @@ const LoginForm = () => {
           Register Now!
         </Link>
       </div>
-      <Button type="submit">
+      <Button
+        type="submit"
+        className="focus:bg-[##10304f] bg-[#174674] px-[26px] py-[10px] rounded-full text-[white]"
+      >
         {isLoading ? (
           <SyncLoader color="white" size={10} />
         ) : (
