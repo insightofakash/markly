@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLogin } from "../hooks/useLogin";
 import { SyncLoader } from "react-spinners";
+import Button from "./Button";
 
 const schema = z.object({
   email: z
@@ -95,7 +96,7 @@ const LoginForm = () => {
           Register Now!
         </Link>
       </div>
-      <button
+      <Button
         type="submit"
         className="focus:bg-[##10304f] bg-[#174674] px-[26px] py-[10px] rounded-full text-[white]"
       >
@@ -104,7 +105,7 @@ const LoginForm = () => {
         ) : (
           <span>Sign in</span>
         )}
-      </button>
+      </Button>
     </form>
   );
 };

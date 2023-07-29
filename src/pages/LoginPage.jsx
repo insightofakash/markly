@@ -14,8 +14,8 @@ const LoginPage = () => {
     <div className="flex items-center justify-center w-[100vw] h-[100vh] bg-main-col relative">
       <Logo />
       <div className="absolute flex gap-5 top-5 right-5 sm:right-20 lg:right-30 2xl:right-40 2xl:top-8">
-        <Button active={false}>Sign Up</Button>
-        <Button active={false}>Login</Button>
+        <Button disabled={true}>Sign Up</Button>
+        <Button disabled={true}>Login</Button>
       </div>
       <div className=" w-[100vw] h-[100vh] pt-[25vw] md:pt-20 flex flex-col items-center bg-[#ECECEC] md:w-[500px] md:h-[700px] md:rounded-[64px] p-20">
         <h1 className="text-[#174674] text-5xl">Sign in!</h1>
