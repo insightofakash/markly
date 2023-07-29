@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import NoPage from "./pages/NoPage";
 import DashboardPage from "./pages/DashboardPage";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
@@ -16,15 +17,16 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="dashboard" element={<DashboardPage />} />
+          </Route>
           <Route path="login" element={<LoginPage />} />
-          <Route path="dashboard" element={<DashboardPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
         <Toaster position="top-center" />
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-
   );
 }
 

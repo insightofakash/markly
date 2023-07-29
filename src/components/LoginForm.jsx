@@ -11,7 +11,8 @@ const schema = z.object({
   email: z
     .string()
     .min(1, { message: "Email is required" })
-    .email({ message: "This email does not exist, please try again" }),
+    .email({ message: "This is not a valid email" }),
+
   password: z.string().min(1, { message: "Password is required" }),
 });
 
@@ -31,6 +32,17 @@ const LoginForm = () => {
     login(data);
   };
 
+  const handleShowPassword = () => {
+    setIsShownPassword((s) => !s);
+
+    // Have to use this code to bypass the ReactHookForm default functionality
+    const input = document.querySelector("#password");
+    setTimeout(() => {
+      input.focus();
+      input.setSelectionRange(input.value.length, input.value.length);
+    }, 10);
+  };
+
   return (
     <form
       className="flex items-center flex-col"
@@ -41,6 +53,7 @@ const LoginForm = () => {
           autoFocus
           className="rounded-lg w-[340px] h-[48px] px-5 border border-[#B7B7B7] text-stone-600 focus:border-none focus:outline-none focus:ring-2 focus:ring-[#578598]"
           placeholder="Enter your email here"
+          disabled={isLoading}
           {...register("email")}
         />
         {errors.email || supabaseError ? (
@@ -56,6 +69,7 @@ const LoginForm = () => {
             className="rounded-lg w-[340px] h-[48px] px-5 border border-[#B7B7B7] text-stone-600 focus:border-none focus:outline-none focus:ring-2 focus:ring-[#578598]"
             placeholder={`Enter your password here`}
             type={isShownPassword ? "text" : "password"}
+            disabled={isLoading}
             {...register("password")}
           />
           {errors.password || supabaseError ? (
@@ -66,7 +80,7 @@ const LoginForm = () => {
         </div>
         <div
           className="absolute top-3.5 right-4 cursor-pointer"
-          onClick={() => setIsShownPassword((s) => !s)}
+          onClick={handleShowPassword}
         >
           {!isShownPassword ? (
             <BsEyeSlash className="opacity-20" size={23} />
@@ -83,9 +97,13 @@ const LoginForm = () => {
       </div>
       <button
         type="submit"
-        className="bg-[#174674] px-[26px] py-[10px] rounded-full text-[white]"
+        className="focus:bg-[##10304f] bg-[#174674] px-[26px] py-[10px] rounded-full text-[white]"
       >
-        {isLoading ? <SyncLoader color="white" /> : <span>Sign in</span>}
+        {isLoading ? (
+          <SyncLoader color="white" size={10} />
+        ) : (
+          <span>Sign in</span>
+        )}
       </button>
     </form>
   );
