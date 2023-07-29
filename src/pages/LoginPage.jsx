@@ -4,11 +4,11 @@ import Logo from "../components/Logo";
 import Button from "../components/Button";
 import { useUser } from "../hooks/useUser";
 import { Navigate } from "react-router";
-import NoPage from "./NoPage";
+import LoadingPage from "./LoadingPage";
 
 const LoginPage = () => {
   const { isAuthenticated, isLoading } = useUser();
-  if (isLoading) return <NoPage />;
+  if (isLoading) return <LoadingPage />;
   if (isAuthenticated) return <Navigate to="/dashboard" />;
   return (
     <div className="flex items-center justify-center w-[100vw] h-[100vh] bg-main-col relative">
