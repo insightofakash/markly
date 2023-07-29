@@ -1,5 +1,8 @@
+import { useLogout } from "../hooks/useLogout";
+
 const DashboardPage = () => {
-  return <div>DashboardPage</div>;
+  const { logout, isLoading } = useLogout();
+  return <button onClick={logout}>Logout</button>;
 };
 
 export default DashboardPage;
