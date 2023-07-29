@@ -8,9 +8,9 @@ const HomePage = () => {
       <div className="flex justify-between mx-[13.65vw] mt-[60px]">
         <Logo />
         <div className="absolute flex gap-5 top-5 right-5 sm:right-20 lg:right-30 2xl:right-40 2xl:top-8">
-          <Button active={false}>Sign Up</Button>
+          <Button disabled={true}>Sign Up</Button>
           <Link to="/login">
-            <Button active={true}>Login</Button>
+            <Button>Login</Button>
           </Link>
         </div>
       </div>
@@ -37,11 +37,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-/* 
-text-align: center;
-font-family: PP Telegraf;
-font-size: 86px;
-
-line-height: 83.5%; /* 71.81px 
-letter-spacing: -2.15px; */
