@@ -7,6 +7,9 @@ export default {
         "main-col": "#FAFFFC",
         "hl-col": "#174674",
       },
+      fontFamily: {
+        Lato: ["Lato"],
+      },
     },
   },
   plugins: [],

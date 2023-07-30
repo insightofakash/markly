@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-const Button = forwardRef(function Button({ children, disabled }, props, ref) {
+const Button = forwardRef(function Button({ children, disabled, props }, ref) {
   return (
     <button
       ref={ref}
