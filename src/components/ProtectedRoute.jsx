@@ -3,7 +3,6 @@ import { useUser } from "../hooks/useUser";
 
 const ProtectedRoute = () => {
   const { isAuthenticated } = useUser();
-  console.log(isAuthenticated);
 
   return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
 };
