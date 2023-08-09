@@ -2,7 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "main-col": "#FAFFFC",
+        "hl-col": "#174674",
+      },
+      fontFamily: {
+        Lato: ["Lato"],
+      },
+    },
   },
   plugins: [],
 };
